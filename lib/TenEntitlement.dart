@@ -1,0 +1,337 @@
+import 'package:flutter/material.dart';
+import 'package:final_nav_bar/HomePage.dart';
+import 'package:final_nav_bar/About.dart';
+import 'package:final_nav_bar/Objective.dart';
+import 'package:final_nav_bar/Stakeholders.dart';
+import 'package:final_nav_bar/TenEntitlement.dart';
+import 'package:final_nav_bar/Works.dart';
+// import 'package:final_nav_bar/SearchAssets.dart';
+// import 'package:final_nav_bar/NearbyAssets.dart';
+import 'package:final_nav_bar/Login.dart';
+
+class TenEntitlementPage extends StatelessWidget {
+  const TenEntitlementPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("MNREGA"),
+        backgroundColor: Colors.blueAccent,
+      ),
+      drawer: const NavigationDrawer(),
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const <Widget>[
+                    Padding(padding: EdgeInsets.fromLTRB(0, 15, 0, 0)),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                      child: Text(
+                        "Ten Entitlement",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins',
+                          fontSize: 24,
+                          color: Colors.blueAccent,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement I - Right to a Job Card (JC)",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement II - Right to Demand and receive work within 15 days",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement III - Right to Unemployment Allowance",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement IV - Right to plan & prepare a shelf of projects",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement V - Right to obtain work within a radius of 5 km",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement VI - Right to worksite facilities",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement VII - Right to notified wage rate",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement VIII - Right to receive wages within 15 days",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement IX - Compensation for delay in payment of wages",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+                      child: Text(
+                        "Entitlement X- Right to time bound redress of grievances, right to conduct concurrent social audits and social audits of all Mahatma Gandhi NREGA expenditure",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class NavigationDrawer extends StatelessWidget {
+  const NavigationDrawer({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) => Drawer(
+    child: SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          buildHeader(context),
+          buildMenuItems(context),
+        ],
+      ),
+    ),
+  );
+
+  Widget buildHeader(BuildContext context) => Container(
+    padding: EdgeInsets.only(
+      top: MediaQuery.of(context).padding.top,
+    ),
+  );
+
+  Widget buildMenuItems(BuildContext context) => Container(
+    padding: const EdgeInsets.all(24),
+    child: Wrap(
+      runSpacing: 0,
+      children: [
+        ListTile(
+          leading: const Icon(Icons.location_pin),
+          title: const Text('Background'),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const HomePage(),
+            ));
+          },
+        ),
+        const Divider(
+          color: Colors.blueAccent,
+        ),
+        ListTile(
+          leading: const Icon(Icons.info),
+          title: const Text('About MGNREGA'),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const AboutPage(),
+            ));
+          },
+        ),
+        const Divider(
+          color: Colors.blueAccent,
+        ),
+        ListTile(
+          leading: const Icon(Icons.games_outlined),
+          title: const Text('Objectives'),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const ObjectivePage(),
+            ));
+          },
+        ),
+        const Divider(
+          color: Colors.blueAccent,
+        ),
+        ListTile(
+          leading: const Icon(Icons.stacked_bar_chart),
+          title: const Text('Stakeholders'),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const StakeholderPage(),
+            ));
+          },
+        ),
+        const Divider(
+          color: Colors.blueAccent,
+        ),
+        ListTile(
+          leading: const Icon(Icons.verified_user),
+          iconColor: Colors.blueAccent,
+          title: const Text('Ten Entitlement'),
+          textColor: Colors.blueAccent,
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const TenEntitlementPage(),
+            ));
+          },
+        ),
+        const Divider(
+          color: Colors.blueAccent,
+        ),
+        ListTile(
+          leading: const Icon(Icons.work),
+          title: const Text('Works'),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const WorkPage(),
+            ));
+          },
+        ),
+        const Divider(
+          color: Colors.blueAccent,
+        ),
+        ListTile(
+          leading: const Icon(Icons.share_location_sharp),
+          title: const Text('Search Assets'),
+          onTap: () {
+            // Navigator.of(context).push(MaterialPageRoute(
+            //   builder: (context) => const SearchAssetsPage(),
+            // ));
+          },
+        ),
+        const Divider(
+          color: Colors.blueAccent,
+        ),
+        ListTile(
+          leading: const Icon(Icons.my_location),
+          title: const Text('Nearby Assets'),
+          onTap: () {
+            // Navigator.of(context).push(MaterialPageRoute(
+            //   builder: (context) => const NearbyAssetsPage(),
+            // ));
+          },
+        ),
+        const Divider(
+          color: Colors.blueAccent,
+        ),
+        ListTile(
+          leading: const Icon(Icons.login),
+          title: const Text('Login'),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const LoginPage(),
+            ));
+          },
+        ),
+      ],
+    ),
+  );
+}
