@@ -8,8 +8,8 @@ import 'package:final_nav_bar/Works.dart';
 import 'package:final_nav_bar/SearchAssets.dart';
 import 'package:final_nav_bar/Login.dart';
 
-class ObjectivePage extends StatelessWidget {
-  const ObjectivePage({Key? key}) : super(key: key);
+class SearchAssets extends StatelessWidget {
+  const SearchAssets({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class ObjectivePage extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                     child: Text(
-                      "Objectives",
+                      "Search Assets",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Poppins',
@@ -49,56 +49,11 @@ class ObjectivePage extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    child: Text(
-                      "- Providing up to 100 days of unskilled manual work in a financial year to every household in rural areas, as per demand, resulting in creation of productive assets of prescribed quality & durability.",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Poppins',
-                        // fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                    child:
+                    Text("data")
                   ),
                   Divider(
                     color: Colors.blueAccent,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    child: Text(
-                      "- Strengthening the livelihood resource-base of the poor.",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Poppins',
-                        // fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                  Divider(
-                    color: Colors.blueAccent,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    child: Text(
-                      "- Proactively ensuring social inclusion.",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Poppins',
-                        // fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                  Divider(
-                    color: Colors.blueAccent,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
-                    child: Text(
-                      "- Strengthening of Panchayati Raj Institutions (PRIs).",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Montserrat',
-                        // fontWeight: FontWeight.w600,
-                      ),
-                    ),
                   ),
                 ],
               ),
@@ -139,10 +94,12 @@ class NavigationDrawer extends StatelessWidget {
       children: [
         ListTile(
           leading: const Icon(Icons.location_pin),
-          title: const Text('Background',
-            style: TextStyle(
-                fontSize: 18
-            ),),
+          title: const Text(
+              'Background',
+          style: TextStyle(
+            fontSize: 18
+          ),
+          ),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const HomePage(),
@@ -169,12 +126,10 @@ class NavigationDrawer extends StatelessWidget {
         ),
         ListTile(
           leading: const Icon(Icons.games_outlined),
-          iconColor: Colors.blueAccent,
           title: const Text('Objectives',
             style: TextStyle(
                 fontSize: 18
             ),),
-          textColor: Colors.blueAccent,
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const ObjectivePage(),
@@ -231,10 +186,12 @@ class NavigationDrawer extends StatelessWidget {
         ),
         ListTile(
           leading: const Icon(Icons.share_location_sharp),
+          iconColor: Colors.blueAccent,
           title: const Text('Search Assets',
             style: TextStyle(
                 fontSize: 18
             ),),
+          textColor: Colors.blueAccent,
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const SearchAssets(),

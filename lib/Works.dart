@@ -4,8 +4,8 @@ import 'package:final_nav_bar/About.dart';
 import 'package:final_nav_bar/Objective.dart';
 import 'package:final_nav_bar/Stakeholders.dart';
 import 'package:final_nav_bar/TenEntitlement.dart';
-// import 'package:final_nav_bar/Works.dart';
-// import 'package:final_nav_bar/SearchAssets.dart';
+import 'package:final_nav_bar/Works.dart';
+import 'package:final_nav_bar/SearchAssets.dart';
 // import 'package:final_nav_bar/NearbyAssets.dart';
 import 'package:final_nav_bar/Login.dart';
 
@@ -424,7 +424,10 @@ class NavigationDrawer extends StatelessWidget {
       children: [
         ListTile(
           leading: const Icon(Icons.location_pin),
-          title: const Text('Background'),
+          title: const Text('Background',
+            style: TextStyle(
+                fontSize: 18
+            ),),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const HomePage(),
@@ -436,7 +439,10 @@ class NavigationDrawer extends StatelessWidget {
         ),
         ListTile(
           leading: const Icon(Icons.info),
-          title: const Text('About MGNREGA'),
+          title: const Text('About MGNREGA',
+            style: TextStyle(
+                fontSize: 18
+            ),),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const AboutPage(),
@@ -448,7 +454,10 @@ class NavigationDrawer extends StatelessWidget {
         ),
         ListTile(
           leading: const Icon(Icons.games_outlined),
-          title: const Text('Objectives'),
+          title: const Text('Objectives',
+            style: TextStyle(
+                fontSize: 18
+            ),),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const ObjectivePage(),
@@ -460,7 +469,10 @@ class NavigationDrawer extends StatelessWidget {
         ),
         ListTile(
           leading: const Icon(Icons.stacked_bar_chart),
-          title: const Text('Stakeholders'),
+          title: const Text('Stakeholders',
+            style: TextStyle(
+                fontSize: 18
+            ),),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const StakeholderPage(),
@@ -472,7 +484,10 @@ class NavigationDrawer extends StatelessWidget {
         ),
         ListTile(
           leading: const Icon(Icons.verified_user),
-          title: const Text('Ten Entitlement'),
+          title: const Text('Ten Entitlement',
+            style: TextStyle(
+                fontSize: 18
+            ),),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const TenEntitlementPage(),
@@ -485,7 +500,10 @@ class NavigationDrawer extends StatelessWidget {
         ListTile(
           leading: const Icon(Icons.work),
           iconColor: Colors.blueAccent,
-          title: const Text('Works'),
+          title: const Text('Works',
+            style: TextStyle(
+                fontSize: 18
+            ),),
           textColor: Colors.blueAccent,
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
@@ -498,31 +516,37 @@ class NavigationDrawer extends StatelessWidget {
         ),
         ListTile(
           leading: const Icon(Icons.share_location_sharp),
-          title: const Text('Search Assets'),
+          title: const Text('Search Assets',
+            style: TextStyle(
+                fontSize: 18
+            ),),
           onTap: () {
-            // Navigator.of(context).push(MaterialPageRoute(
-            //   builder: (context) => const SearchAssetsPage(),
-            // ));
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const SearchAssets(),
+            ));
           },
         ),
         const Divider(
           color: Colors.blueAccent,
         ),
-        ListTile(
-          leading: const Icon(Icons.my_location),
-          title: const Text('Nearby Assets'),
-          onTap: () {
-            // Navigator.of(context).push(MaterialPageRoute(
-            //   builder: (context) => const NearbyAssetsPage(),
-            // ));
-          },
-        ),
-        const Divider(
-          color: Colors.blueAccent,
-        ),
+        // ListTile(
+        //   leading: const Icon(Icons.my_location),
+        //   title: const Text('Nearby Assets'),
+        //   onTap: () {
+        //     // Navigator.of(context).push(MaterialPageRoute(
+        //     //   builder: (context) => const NearbyAssetsPage(),
+        //     // ));
+        //   },
+        // ),
+        // const Divider(
+        //   color: Colors.blueAccent,
+        // ),
         ListTile(
           leading: const Icon(Icons.login),
-          title: const Text('Login'),
+          title: const Text('Login',
+            style: TextStyle(
+                fontSize: 18
+            ),),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const LoginPage(),
