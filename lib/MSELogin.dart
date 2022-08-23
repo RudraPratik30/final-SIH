@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:final_nav_bar/MSEProfile.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'services/authserve.dart';
 
 class MSELogin extends StatefulWidget {
   const MSELogin({Key? key}) : super(key: key);
@@ -9,6 +11,7 @@ class MSELogin extends StatefulWidget {
 }
 
 class _MSELoginState extends State<MSELogin> {
+  var username, ID, pass, token;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,6 +84,9 @@ class _MSELoginState extends State<MSELogin> {
                       style: const TextStyle(
                         fontSize: 18.0,
                       ),
+                      onChanged: (value) {
+                        username = value;
+                      },
                       decoration: const InputDecoration(
                         icon: Icon(
                           Icons.person,
@@ -110,6 +116,9 @@ class _MSELoginState extends State<MSELogin> {
                       style: const TextStyle(
                         fontSize: 18.0,
                       ),
+                      onChanged: (value) {
+                        ID = value;
+                      },
                       decoration: const InputDecoration(
                         icon: Icon(
                           Icons.security,
@@ -139,6 +148,9 @@ class _MSELoginState extends State<MSELogin> {
                       style: const TextStyle(
                         fontSize: 18.0,
                       ),
+                      onChanged: (value) {
+                        pass = value;
+                      },
                       decoration: const InputDecoration(
                         icon: Icon(
                           Icons.password,
@@ -161,13 +173,28 @@ class _MSELoginState extends State<MSELogin> {
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(20.0)),
                     child: FlatButton(
-                      onPressed: () => {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const MSEProfilePage(),
-                          ),
-                        )
+                      onPressed: () {
+                        AuthService().auth(username, ID, pass).then(
+                          (value) {
+                            if (value.data['success']) {
+                              token = value.data['token'];
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const MSEProfilePage()));
+                            } else {
+                              Fluttertoast.showToast(
+                                  msg: value.data['message'],
+                                  toastLength: Toast.LENGTH_SHORT,
+                                  gravity: ToastGravity.BOTTOM,
+                                  timeInSecForIosWeb: 1,
+                                  backgroundColor: Colors.red,
+                                  textColor: Colors.white,
+                                  fontSize: 16.0);
+                            }
+                          },
+                        );
                       },
                       child: const Center(
                         child: Text(
