@@ -1,16 +1,15 @@
-// import 'package:final_nav_bar/MSEWorkHistory.dart';
 import 'package:flutter/material.dart';
 // import 'package:final_nav_bar/MSEPersonal.dart';
 import 'package:final_nav_bar/MSEWorkData.dart';
 
-class MSEWorkHistory extends StatefulWidget {
-  const MSEWorkHistory({Key? key}) : super(key: key);
+class EmpWorkHistory extends StatefulWidget {
+  const EmpWorkHistory({Key? key}) : super(key: key);
 
   @override
-  State<MSEWorkHistory> createState() => _MSEWorkHistory();
+  State<EmpWorkHistory> createState() => _EmpWorkHistory();
 }
 
-class _MSEWorkHistory extends State<MSEWorkHistory> {
+class _EmpWorkHistory extends State<EmpWorkHistory> {
   @override
   Widget build(BuildContext context) {
 
@@ -33,7 +32,7 @@ class _MSEWorkHistory extends State<MSEWorkHistory> {
       //   title: const Text(""),
       // ),
       body: isMobile
-        ?SafeArea(
+          ?SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Padding(
@@ -318,7 +317,7 @@ class _MSEWorkHistory extends State<MSEWorkHistory> {
           ),
         ),
       )
-        :SafeArea(
+          :SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Padding(
