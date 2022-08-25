@@ -13,6 +13,9 @@ class ObjectivePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final isMobile = MediaQuery.of(context).size.shortestSide < 600;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("MNREGA"),
@@ -20,87 +23,179 @@ class ObjectivePage extends StatelessWidget {
       ),
       drawer: const NavigationDrawer(),
       backgroundColor: Colors.white,
-      body: SafeArea(
+      body: isMobile
+        ?SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(10.0),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const <Widget>[
+                    Padding(padding: EdgeInsets.fromLTRB(0, 15, 0, 0)),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                      child: Text(
+                        "Objectives",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins',
+                          fontSize: 24,
+                          color: Colors.blueAccent,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "- Providing up to 100 days of unskilled manual work in a financial year to every household in rural areas, as per demand, resulting in creation of productive assets of prescribed quality & durability.",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "- Strengthening the livelihood resource-base of the poor.",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "- Proactively ensuring social inclusion.",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+                      child: Text(
+                        "- Strengthening of Panchayati Raj Institutions (PRIs).",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Montserrat',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const <Widget>[
-                  Padding(padding: EdgeInsets.fromLTRB(0, 15, 0, 0)),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                    child: Text(
-                      "Objectives",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Poppins',
-                        fontSize: 24,
-                        color: Colors.blueAccent,
+            ),
+          ),
+        ),
+      )
+        :SafeArea(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(10.0, 40.0, 10, 10),
+              child: Container(
+                width: 1100,
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const <Widget>[
+                    Padding(padding: EdgeInsets.fromLTRB(0, 15, 0, 0)),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                      child: Text(
+                        "Objectives",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins',
+                          fontSize: 24,
+                          color: Colors.blueAccent,
+                        ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    child: Text(
-                      "- Providing up to 100 days of unskilled manual work in a financial year to every household in rural areas, as per demand, resulting in creation of productive assets of prescribed quality & durability.",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Poppins',
-                        // fontWeight: FontWeight.w600,
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "- Providing up to 100 days of unskilled manual work in a financial year to every household in rural areas, as per demand, resulting in creation of productive assets of prescribed quality & durability.",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
-                  ),
-                  Divider(
-                    color: Colors.blueAccent,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    child: Text(
-                      "- Strengthening the livelihood resource-base of the poor.",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Poppins',
-                        // fontWeight: FontWeight.w600,
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "- Strengthening the livelihood resource-base of the poor.",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
-                  ),
-                  Divider(
-                    color: Colors.blueAccent,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    child: Text(
-                      "- Proactively ensuring social inclusion.",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Poppins',
-                        // fontWeight: FontWeight.w600,
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "- Proactively ensuring social inclusion.",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
-                  ),
-                  Divider(
-                    color: Colors.blueAccent,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
-                    child: Text(
-                      "- Strengthening of Panchayati Raj Institutions (PRIs).",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Montserrat',
-                        // fontWeight: FontWeight.w600,
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+                      child: Text(
+                        "- Strengthening of Panchayati Raj Institutions (PRIs).",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Montserrat',
+                          // fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

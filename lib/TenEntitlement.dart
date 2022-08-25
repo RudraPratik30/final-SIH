@@ -14,6 +14,9 @@ class TenEntitlementPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final isMobile = MediaQuery.of(context).size.shortestSide < 600;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("MNREGA"),
@@ -21,13 +24,187 @@ class TenEntitlementPage extends StatelessWidget {
       ),
       drawer: const NavigationDrawer(),
       backgroundColor: Colors.white,
-      body: SafeArea(
+      body: isMobile
+        ?SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const <Widget>[
+                    Padding(padding: EdgeInsets.fromLTRB(0, 15, 0, 0)),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                      child: Text(
+                        "Ten Entitlement",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins',
+                          fontSize: 24,
+                          color: Colors.blueAccent,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement I - Right to a Job Card (JC)",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement II - Right to Demand and receive work within 15 days",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement III - Right to Unemployment Allowance",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement IV - Right to plan & prepare a shelf of projects",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement V - Right to obtain work within a radius of 5 km",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement VI - Right to worksite facilities",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement VII - Right to notified wage rate",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement VIII - Right to receive wages within 15 days",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "Entitlement IX - Compensation for delay in payment of wages",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.blueAccent,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
+                      child: Text(
+                        "Entitlement X- Right to time bound redress of grievances, right to conduct concurrent social audits and social audits of all Mahatma Gandhi NREGA expenditure",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          // fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      )
+        :SafeArea(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(10.0, 40.0, 10, 30),
+              child: Container(
+                width: 1100,
                 decoration: BoxDecoration(
                   color: Colors.grey[300],
                   borderRadius: BorderRadius.circular(10.0),

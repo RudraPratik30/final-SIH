@@ -14,6 +14,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final isMobile = MediaQuery.of(context).size.shortestSide < 600;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("MNREGA"),
@@ -21,7 +24,8 @@ class HomePage extends StatelessWidget {
       ),
       drawer: const NavigationDrawer(),
       backgroundColor: Colors.white,
-      body: SafeArea(
+      body: isMobile
+        ? SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Center(
@@ -40,6 +44,65 @@ class HomePage extends StatelessWidget {
                     Padding(padding: EdgeInsets.fromLTRB(0, 15, 0, 0)),
                     Padding(
                       padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                      child: Text(
+                        "Background",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins',
+                          fontSize: 24,
+                          color: Colors.blueAccent,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Text(
+                        "To address twin objectives of 'Planning' & 'Accountability' in tracking the Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS)-sponsored works & created 'Assets', the Ministry of Rural Development (MoRD), Government of India, has designed & implemented a technical solution 'GeoMGNREGA'.",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 5, 20, 20),
+                      child: Text(
+                        "It is a path breaking initiative that uses space technology for 'Geotagging' all assets created under MGNREGS for improved planning, effective monitoring, enhanced visibility & greater transparency. GeoMGNREGA was launched on 30th of September 2016 in public domain, with a vision to make assets under MGNREGS transparent. It is a combination of Remote Sensing (RS) & Geographical Information System (GIS)-based technologies that serve as an effective tool to collect, store & analyze the various assets under MGNREGS, such as Farm Ponds, Percolation Tanks, Check Dams, Irrigation Channels, Rural Roads etc.",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      )
+        : SafeArea(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(10.0, 40.0, 10, 10),
+              child: Container(
+                width: 1100,
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+
+                  children: const <Widget>[
+                    Padding(padding: EdgeInsets.fromLTRB(0, 5, 0, 0)),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
                       child: Text(
                         "Background",
                         style: TextStyle(
